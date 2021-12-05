@@ -2,13 +2,26 @@
 
 A social video downloader npm package which helps to ganerate downloadable urls for all kind of social videos
 
-#Installation
+## supported platforms:
 
-`npm i asim-video-downloader`
+## All Supported Platforms:
+
+| youtube.com        | facebook.com    | instagram.com | twitter.com |
+| ------------------ | --------------- | ------------- | ----------- |
+| tiktok.com         | dailymotion.com | vimeo.com     | vk.com      |
+| odnoklassniki.ru   | soundcloud.com  | bilibili.com  | hotstar.com |
+| openloadmovies.net | streamago.com   | tiktok.com    | tune.pk     |
+| viu.com            | ---             | ---           | ---         |
+
+# Installation
+
+```sh
+npm i asim-video-downloader
+```
 
 then...
 
-```
+```js
 const svd = require("soft-video-downloader");
 
 const data = svd("https://www.youtube.com/watch?v=-DEPDfN8ZYk").then(
@@ -18,8 +31,8 @@ const data = svd("https://www.youtube.com/watch?v=-DEPDfN8ZYk").then(
   }
 );
 
-// output:
 /*
+output:
 {
   info: {
     duration: '10:08',
