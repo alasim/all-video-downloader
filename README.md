@@ -11,9 +11,9 @@ npm i asim-video-downloader
 then...
 
 ```js
-const svd = require("soft-video-downloader");
+const avd = require("soft-video-downloader");
 
-const data = svd("https://www.youtube.com/watch?v=-DEPDfN8ZYk").then(
+const data = avd("https://www.youtube.com/watch?v=-DEPDfN8ZYk").then(
   (result) => {
     console.log(result);
     return result;
