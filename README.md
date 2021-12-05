@@ -11,8 +11,12 @@ then...
 ```
 const svd = require("soft-video-downloader");
 
-const data = svd("https://www.youtube.com/watch?v=mtgjJ2ipWBc")
-.then(result=>result);
+const data = svd("https://www.youtube.com/watch?v=-DEPDfN8ZYk").then(
+  (result) => {
+    console.log(result);
+    return result;
+  }
+);
 
 // output:
 /*
