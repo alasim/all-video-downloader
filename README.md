@@ -2,17 +2,6 @@
 
 A social video downloader npm package which helps to ganerate downloadable urls for all kind of social videos
 
-## supported platforms:
-
-## All Supported Platforms:
-
-| youtube.com        | facebook.com    | instagram.com | twitter.com |
-| ------------------ | --------------- | ------------- | ----------- |
-| tiktok.com         | dailymotion.com | vimeo.com     | vk.com      |
-| odnoklassniki.ru   | soundcloud.com  | bilibili.com  | hotstar.com |
-| openloadmovies.net | streamago.com   | tiktok.com    | tune.pk     |
-| viu.com            | ---             | ---           | ---         |
-
 # Installation
 
 ```sh
@@ -54,3 +43,14 @@ output:
 }
 */
 ```
+
+## All Supported Platforms:
+
+| youtube.com        | facebook.com    | instagram.com | twitter.com |
+| ------------------ | --------------- | ------------- | ----------- |
+| tiktok.com         | dailymotion.com | vimeo.com     | vk.com      |
+| odnoklassniki.ru   | soundcloud.com  | bilibili.com  | hotstar.com |
+| openloadmovies.net | streamago.com   | tiktok.com    | tune.pk     |
+| viu.com            | ---             | ---           | ---         |
+
+[![Best Buildup](https://res.cloudinary.com/alasim/image/upload/v1638729338/hosting%20content/best_buldup.png)](https://www.bestbuildup.com/)
