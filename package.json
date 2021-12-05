@@ -1,0 +1,29 @@
+{
+  "name": "soft-video-downloader",
+  "version": "1.0.0",
+  "description": "A social video downloader npm package which helps to ganerate downloadable urls for all kind of social videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alasim/soft-video-downloader.git"
+  },
+  "keywords": [
+    "video",
+    "downloader",
+    "all",
+    "video",
+    "downloader"
+  ],
+  "author": "alasim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alasim/soft-video-downloader/issues"
+  },
+  "homepage": "https://github.com/alasim/soft-video-downloader#readme",
+  "dependencies": {
+    "nightmare": "^3.0.2"
+  }
+}
