@@ -1,24 +1,24 @@
-# asim-video-downloader
+# all-video-downloader
 
-A social video downloader npm package which helps to ganerate downloadable urls for all kind of social videos
+A social video downloader npm package which helps to ganerate the downloadable urls from all kind of social video platforms
 
 # Installation
 
 ```sh
-npm i asim-video-downloader
+npm i all-video-downloader
 ```
 
 then...
 
 ```js
-const avd = require("asim-video-downloader");
+const avd = require("all-video-downloader");
 
-const data = avd("https://www.youtube.com/watch?v=-DEPDfN8ZYk").then(
-  (result) => {
-    console.log(result);
-    return result;
-  }
-);
+const info_with_option_urls = avd(
+  "https://www.youtube.com/watch?v=-DEPDfN8ZYk"
+).then((result) => {
+  console.log(result);
+  return result;
+});
 
 /*
 output:

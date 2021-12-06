@@ -1,7 +1,7 @@
 const Nightmare = require("nightmare");
 const nightmare = Nightmare({ show: false });
 
-function avd({ url }) {
+function avd(url) {
   return new Promise(async (resolve, reject) => {
     nightmare
       .goto("https://en.savefrom.net/65/")
