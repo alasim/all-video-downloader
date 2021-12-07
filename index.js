@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-function avd(url, headless = false) {
+function avd(url, headless = true) {
   return new Promise(async (resolve, reject) => {
     try {
       const URL = "https://en.savefrom.net/65/";
