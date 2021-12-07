@@ -1,6 +1,6 @@
 # all-video-downloader
 
-A social video downloader npm package which helps to ganerate the downloadable urls from all kind of social video platforms
+A video downloader package which helps to ganerate the downloadable urls from all kind of social video platforms
 
 # Installation
 
