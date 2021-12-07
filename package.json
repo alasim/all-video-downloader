@@ -1,6 +1,6 @@
 {
   "name": "all-video-downloader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A social video downloader npm package which helps to ganerate the downloadable urls from all kind of social video platforms",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/alasim/soft-video-downloader#readme",
   "dependencies": {
-    "nightmare": "^3.0.2"
+    "puppeteer": "^12.0.1"
   }
 }
