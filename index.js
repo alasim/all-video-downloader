@@ -1,9 +1,10 @@
 const puppeteer = require("puppeteer");
 function avd(url, headless = true) {
   return new Promise(async (resolve, reject) => {
+    let browser;
     try {
       const URL = "https://en.savefrom.net/65/";
-      const browser = await puppeteer.launch({
+      browser = await puppeteer.launch({
         headless: headless,
         args: ["--disable-setuid-sandbox", "--disable-notifications"],
         ignoreHTTPSErrors: true,
@@ -19,10 +20,16 @@ function avd(url, headless = true) {
       await page.waitForSelector(".media-result");
       console.log(".media-result loaded...............");
       const result = await page.evaluate(() => {
-        const thub = document.querySelector(".media-result .clip img").src;
+        const thub = document.querySelector(".media-result .clip img")
+          ? document.querySelector(".media-result .clip img").src
+          : "https://res.cloudinary.com/alasim/image/upload/v1638853249/hosting%20content/jk-placeholder-image_lj3awz.jpg";
         const info = document.querySelector(".info-box");
-        const title = info.querySelector(".title").innerText;
-        const duration = info.querySelector(".duration").innerText;
+        const title = info.querySelector(".title")
+          ? info.querySelector(".title").innerText
+          : "No title";
+        const duration = info.querySelector(".duration")
+          ? info.querySelector(".duration").innerText
+          : "";
         const link_group = [...info.querySelectorAll(".link-group a")];
         console.log(link_group);
 
@@ -45,9 +52,10 @@ function avd(url, headless = true) {
           links,
         };
       });
-      resolve(result);
       browser.close();
+      resolve(result);
     } catch (error) {
+      browser.close();
       reject(error);
     }
   });
