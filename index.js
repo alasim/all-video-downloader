@@ -1,24 +1,22 @@
 const puppeteer = require("puppeteer");
-function avd(url, headless = true) {
+function avd(url, dev = true) {
   return new Promise(async (resolve, reject) => {
     let browser;
     try {
       const URL = "https://en.savefrom.net/65/";
       browser = await puppeteer.launch({
-        headless: headless,
+        headless: !dev,
         args: ["--disable-setuid-sandbox", "--disable-notifications"],
         ignoreHTTPSErrors: true,
       });
       const page = await browser.newPage();
-      console.log("going to " + URL + ".............");
       await page.goto(URL);
-      console.log("start typing...............");
       await page.type("#sf_url", url, { delay: 0 });
-      console.log("submiting...............");
+
       await page.click("#sf_submit");
-      console.log("waiting for .media-result...............");
+
       await page.waitForSelector(".media-result");
-      console.log(".media-result loaded...............");
+
       const result = await page.evaluate(() => {
         const thub = document.querySelector(".media-result .clip img")
           ? document.querySelector(".media-result .clip img").src
@@ -31,7 +29,6 @@ function avd(url, headless = true) {
           ? info.querySelector(".duration").innerText
           : "";
         const link_group = [...info.querySelectorAll(".link-group a")];
-        console.log(link_group);
 
         let links = link_group.map((link) => {
           const video_format = link.title;
@@ -40,7 +37,6 @@ function avd(url, headless = true) {
           return { video_format, href, text };
         });
         if (links.length == 0) {
-          console.log(links);
           const link = info.querySelector(".link-download");
           const video_format = "";
           const href = link.href;
